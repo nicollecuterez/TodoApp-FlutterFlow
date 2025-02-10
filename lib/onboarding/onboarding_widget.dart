@@ -460,6 +460,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             .update(createUsersRecordData(
                           displayName: _model.nameTextController.text,
                           birthday: _model.datePicked,
+                          hometown: _model.homeTownTextController.text,
                         ));
 
                         context.goNamed('tasks');
