@@ -1,40 +1,40 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User",
   "type": "object",
   "properties": {
-    "users": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "object",
-        "properties": {
-          "uid": {
-            "type": "string",
-            "description": "Unique identifier for the user."
-          },
-          "display_name": {
-            "type": "string",
-            "description": "User's display name."
-          },
-          "email": {
-            "type": "string",
-            "format": "email",
-            "description": "User's email address."
-          },
-          "photo_url": {
-            "type": "string",
-            "format": "uri",
-            "description": "URL to the user's profile picture."
-          },
-          "birthdate": {
-            "type": "string",
-            "format": "date-time",
-            "description": "User's birthdate as an ISO 8601 timestamp."
-          },
-          "created_time": {
-            "type": "string",
-            "format": "date-time",
-            "description": "Timestamp when the user account was created."
-          }
-        },
-        "required": ["uid", "display_name", "email", "created_time"]
-      }}
+    "uid": {
+      "type": "string",
+      "description": "Unique identifier for the user."
+    },
+    "display_name": {
+      "type": "string",
+      "description": "User's display name."
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "User's email address."
+    },
+    "birthday": {
+      "type": "string",
+      "format": "date-time",
+      "description": "User's birthday as a timestamp."
+    },
+    "created_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of user account creation."
+    },
+    "hometown": {
+      "type": "string",
+      "description": "User's hometown."
+    },
+    "photo_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the user's profile photo."
+    }
+  },
+  "required": ["uid", "display_name", "email", "created_time"]
+}
